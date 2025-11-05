@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- College -->
+    <bean id="college" class="com.tnsif.SpringBasic_Project.spring_boot_basic_project.College">
+        <property name="collegeName" value="IFET College of Engineering"/>
+    </bean>
+
+    <!-- Departments -->
+    <bean id="cseDept" class="com.tnsif.SpringBasic_Project.spring_boot_basic_project.Department">
+        <property name="departmentName" value="CSE Department"/>
+    </bean>
+
+    <bean id="aimlDept" class="com.tnsif.SpringBasic_Project.spring_boot_basic_project.Department">
+        <property name="departmentName" value="AIandML Department"/>
+    </bean>
+
+    <!-- Students for CSE Department -->
+    <bean id="stu1" class="com.tnsif.SpringBasic_Project.spring_boot_basic_project.Student">
+        <property name="id" value="101"/>
+        <property name="name" value="Ram"/>
+        <property name="mark" value="95.0"/>
+        <property name="check" value="true"/>
+        <property name="department" ref="cseDept"/>
+    </bean>
+
+    <bean id="stu2" class="com.tnsif.SpringBasic_Project.spring_boot_basic_project.Student">
+        <property name="id" value="102"/>
+        <property name="name" value="Priya"/>
+        <property name="mark" value="90.0"/>
+        <property name="check" value="true"/>
+        <property name="department" ref="cseDept"/>
+    </bean>
+
+    <!-- Student for AI&ML Department -->
+    <bean id="stu3" class="com.tnsif.SpringBasic_Project.spring_boot_basic_project.Student">
+        <property name="id" value="103"/>
+        <property name="name" value="Kavin"/>
+        <property name="mark" value="92.0"/>
+        <property name="check" value="true"/>
+        <property name="department" ref="aimlDept"/>
+    </bean>
+
+</beans>
